@@ -76,11 +76,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="NFLPlayerInfoListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LongshotParlays.Data\LongshotParlays.Data.csproj">
+      <Project>{E35B42B5-5546-4BBF-BA2F-BB8EB504754E}</Project>
+      <Name>LongshotParlays.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

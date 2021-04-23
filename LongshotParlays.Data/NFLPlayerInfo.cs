@@ -18,7 +18,7 @@ namespace LongshotParlays.Data
         [Required]
         public string LastName { get; set; }
 
-        public string FullName { get; set; } //Concatenate FirstName and Last Name
+        public string FullName { get { return $"{FirstName} {LastName}"; } }
         public int Age { get; set; }
 
         [Required]
