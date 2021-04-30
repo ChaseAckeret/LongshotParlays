@@ -236,6 +236,10 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\NFLPlayerInfo\Index.cshtml" />
+    <Content Include="Views\NFLPlayerInfo\Create.cshtml" />
+    <Content Include="Views\NFLPlayerInfo\Details.cshtml" />
+    <Content Include="Views\NFLPlayerInfo\Edit.cshtml" />
+    <Content Include="Views\NFLPlayerInfo\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

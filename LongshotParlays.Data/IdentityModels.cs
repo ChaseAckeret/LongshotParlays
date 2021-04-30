@@ -34,6 +34,12 @@ namespace LongshotParlays.Web.Models
         }
 
         public DbSet<NFLPlayerInfo> PlayerInfo { get; set; }
+        public DbSet<NFLPlayerStats_Passing> NFLPlayer_Passing { get; set; }
+        public DbSet<NFLPlayerStats_Receiving> NFLPlayer_Receiving { get; set; }
+        public DbSet<NFLPlayerStats_Rushing> NFLPlayer_Rushing { get; set; }
+        public DbSet<NFLTeamInfo> TeamInfo { get; set; }
+        public DbSet<NFLTeamStats_Offense> NFLTeam_Offense { get; set; }
+        public DbSet<NFLTeamStats_Defense> NFLTeam_Defense { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

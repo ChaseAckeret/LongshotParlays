@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,10 +10,14 @@ namespace LongshotParlays.Data
 {
     public class NFLPlayerStats_Passing
     {
+        [Key, ForeignKey(nameof(Player))]
         public int PlayerId { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string FullName { get; set; }
+        public virtual NFLPlayerInfo Player { get; set; }
+
+        //public string FirstName { get; set; }
+        //public string LastName { get; set; }
+        //public string FullName { get; set; }
+
         public int Rank { get; set; }
         public int GamesPlayed { get; set; }
         public int GamesStarted { get; set; }

@@ -1,15 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace LongshotParlays.Data
 {
-    class NFLTeamStats_Defense
+    public class NFLTeamStats_Defense
     {
+        [Key, ForeignKey(nameof(Team))]
         public int TeamId { get; set; }
-        public string Name { get; set; }
+        public virtual NFLTeamInfo Team { get; set; }
+
+        //public string Name { get; set; }
         public int GamesPlayed { get; set; }
         public int PointsAllowed { get; set; }
         public int YardsAllowed { get; set; }

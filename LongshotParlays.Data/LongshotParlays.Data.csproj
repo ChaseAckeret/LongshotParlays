@@ -75,6 +75,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IdentityModels.cs" />
+    <Compile Include="Migrations\202104300159393_Initial.cs" />
+    <Compile Include="Migrations\202104300159393_Initial.Designer.cs">
+      <DependentUpon>202104300159393_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NFLPlayerInfo.cs" />
     <Compile Include="NFLPlayerStats_Passing.cs" />
     <Compile Include="NFLPlayerStats_Receiving.cs" />
@@ -88,6 +94,10 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202104300159393_Initial.resx">
+      <DependentUpon>202104300159393_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -75,11 +75,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="NFLPlayerInfoService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LongshotParlays.Data\LongshotParlays.Data.csproj">
+      <Project>{e35b42b5-5546-4bbf-ba2f-bb8eb504754e}</Project>
+      <Name>LongshotParlays.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LongshotParlays.Model\LongshotParlays.Model.csproj">
+      <Project>{e6aec3e9-cb93-4d10-88d2-bf0ae7a33fe9}</Project>
+      <Name>LongshotParlays.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

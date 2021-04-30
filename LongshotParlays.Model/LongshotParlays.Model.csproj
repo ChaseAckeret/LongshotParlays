@@ -75,7 +75,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IdentityModels.cs" />
+    <Compile Include="NFLPlayerInfoCreate.cs" />
+    <Compile Include="NFLPlayerInfoDetail.cs" />
+    <Compile Include="NFLPlayerInfoEdit.cs" />
     <Compile Include="NFLPlayerInfoListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

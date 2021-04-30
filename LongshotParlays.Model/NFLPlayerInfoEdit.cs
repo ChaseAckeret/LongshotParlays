@@ -7,12 +7,14 @@ using System.Threading.Tasks;
 
 namespace LongshotParlays.Model
 {
-    public class NFLPlayerInfoCreate
+    public class NFLPlayerInfoEdit
     {
         public virtual NFLTeamInfo Team { get; set; }
+        public int PlayerId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Position { get; set; }
-        public string FullName { get { return $"{FullName} {LastName}"; } }
+        public string InjuryStatus { get; set; }
+        public int Age { get; set; }
     }
 }
