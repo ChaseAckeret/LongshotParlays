@@ -80,6 +80,7 @@
     <Compile Include="NFLPlayerInfoEdit.cs" />
     <Compile Include="NFLPlayerInfoListItem.cs" />
     <Compile Include="NFLTeamInfoDetail.cs" />
+    <Compile Include="NFLTeamInfoEdit.cs" />
     <Compile Include="NFLTeamInfoListItem.cs" />
     <Compile Include="NFLTeamInfoCreate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

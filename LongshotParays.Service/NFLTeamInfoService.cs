@@ -78,5 +78,41 @@ namespace LongshotParays.Service
                 };
             }
         }
+
+        public bool UpdateNFLTeamInfo (NFLTeamInfoEdit model)
+        {
+            using (var ctx =new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .TeamInfo
+                        .Single(e => e.TeamId == model.TeamId);
+
+                entity.Name = model.Name;
+                entity.City = model.City;
+                entity.Abbreviation = model.Abbreviation;
+                entity.Conference = model.Conference;
+                entity.Division = model.Division;
+                entity.Stadium = model.Stadium;
+                entity.HeadCoach = model.HeadCoach;
+
+                return ctx.SaveChanges() == 1;    
+            }
+        }
+
+        public bool DeleteNFLTeamInfo(int teamId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .TeamInfo
+                        .Single(e => e.TeamId == teamId);
+
+                ctx.TeamInfo.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }
