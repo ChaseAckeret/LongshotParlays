@@ -14,10 +14,6 @@ namespace LongshotParlays.Data
         public int PlayerId { get; set; }
         public virtual NFLPlayerInfo Player { get; set; }
 
-        //public string FirstName { get; set; }
-        //public string LastName { get; set; }
-        //public string FullName { get; set; }
-
         public int Rank { get; set; }
         public int GamesPlayed { get; set; }
         public int GamesStarted { get; set; }

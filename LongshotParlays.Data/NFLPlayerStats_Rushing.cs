@@ -10,8 +10,7 @@ namespace LongshotParlays.Data
 {
     public class NFLPlayerStats_Rushing
     {
-        //[Key]
-        //public int Rushing { get; set; }
+
         [Key, ForeignKey(nameof(Player))]
         public int PlayerId { get; set; }
         public virtual NFLPlayerInfo Player { get; set; }

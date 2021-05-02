@@ -46,7 +46,6 @@ namespace LongshotParlays.Web.Controllers
             };
 
             ModelState.AddModelError("", "Player could not be created.");
-
             return View(model);
         }
 

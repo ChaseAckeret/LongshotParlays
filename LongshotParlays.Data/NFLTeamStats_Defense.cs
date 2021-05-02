@@ -14,7 +14,6 @@ namespace LongshotParlays.Data
         public int TeamId { get; set; }
         public virtual NFLTeamInfo Team { get; set; }
 
-        //public string Name { get; set; }
         public int GamesPlayed { get; set; }
         public int PointsAllowed { get; set; }
         public int YardsAllowed { get; set; }

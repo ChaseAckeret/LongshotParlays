@@ -31,7 +31,7 @@ namespace LongshotParlays.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(NFLTeamInfoCreate model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return View(model);
             }
