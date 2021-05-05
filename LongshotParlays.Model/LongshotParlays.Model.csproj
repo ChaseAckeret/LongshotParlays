@@ -75,14 +75,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NFLPlayerInfoCreate.cs" />
-    <Compile Include="NFLPlayerInfoDetail.cs" />
-    <Compile Include="NFLPlayerInfoEdit.cs" />
-    <Compile Include="NFLPlayerInfoListItem.cs" />
-    <Compile Include="NFLTeamInfoDetail.cs" />
-    <Compile Include="NFLTeamInfoEdit.cs" />
-    <Compile Include="NFLTeamInfoListItem.cs" />
-    <Compile Include="NFLTeamInfoCreate.cs" />
+    <Compile Include="NFLPlayerInfo\NFLPlayerInfoCreate.cs" />
+    <Compile Include="NFLPlayerInfo\NFLPlayerInfoDetail.cs" />
+    <Compile Include="NFLPlayerInfo\NFLPlayerInfoEdit.cs" />
+    <Compile Include="NFLPlayerInfo\NFLPlayerInfoListItem.cs" />
+    <Compile Include="NFLPlayerStats_PassingCreate.cs" />
+    <Compile Include="NFLPlayerStats_PassingDetail.cs" />
+    <Compile Include="NFLPlayerStats_PassingEdit.cs" />
+    <Compile Include="NFLPlayerStats_PassingListItem.cs" />
+    <Compile Include="NFLPlayerStats_ReceivingCreate.cs" />
+    <Compile Include="NFLPlayerStats_ReceivingDetails.cs" />
+    <Compile Include="NFLPlayerStats_ReceivingEdit.cs" />
+    <Compile Include="NFLPlayerStats_ReceivingListItem.cs" />
+    <Compile Include="NFLPlayerStats_RushingCreate.cs" />
+    <Compile Include="NFLPlayerStats_RushingDetail.cs" />
+    <Compile Include="NFLPlayerStats_RushingEdit.cs" />
+    <Compile Include="NFLPlayerStats_RushingListItem.cs" />
+    <Compile Include="NFLTeamInfo\NFLTeamInfoDetail.cs" />
+    <Compile Include="NFLTeamInfo\NFLTeamInfoEdit.cs" />
+    <Compile Include="NFLTeamInfo\NFLTeamInfoListItem.cs" />
+    <Compile Include="NFLTeamInfo\NFLTeamInfoCreate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,50 @@
+﻿@model LongshotParlays.Model.NFLPlayerStats_ReceivingDetails
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NFLPlayerStats_ReceivingDetails</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PlayerId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PlayerId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Targets)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Targets)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Receptions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Receptions)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Touchdowns)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Touchdowns)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.PlayerId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

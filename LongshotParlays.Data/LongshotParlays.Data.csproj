@@ -80,6 +80,10 @@
     <Compile Include="Migrations\202104300159393_Initial.Designer.cs">
       <DependentUpon>202104300159393_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105050004490_AddPassingPGPD.cs" />
+    <Compile Include="Migrations\202105050004490_AddPassingPGPD.Designer.cs">
+      <DependentUpon>202105050004490_AddPassingPGPD.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NFLPlayerInfo.cs" />
     <Compile Include="NFLPlayerStats_Passing.cs" />
@@ -97,6 +101,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202104300159393_Initial.resx">
       <DependentUpon>202104300159393_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105050004490_AddPassingPGPD.resx">
+      <DependentUpon>202105050004490_AddPassingPGPD.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
