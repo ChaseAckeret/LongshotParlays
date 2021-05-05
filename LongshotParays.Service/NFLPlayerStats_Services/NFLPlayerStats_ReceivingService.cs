@@ -9,95 +9,98 @@ using System.Threading.Tasks;
 
 namespace LongshotParays.Service
 {
-    public class NFLPlayerStats_RushingService
+    public class NFLPlayerStats_ReceivingService
     {
         private readonly Guid _userId;
 
-        public NFLPlayerStats_RushingService(Guid userId)
+        public NFLPlayerStats_ReceivingService(Guid userId)
         {
             _userId = userId;
         }
 
-        public bool CreateRushingStats(NFLPlayerStats_RushingCreate model)
+        public bool CreateReceivingStats(NFLPlayerStats_ReceivingCreate model)
         {
             var entity =
-                new NFLPlayerStats_Rushing()
+                new NFLPlayerStats_Receiving()
                 {
-                    Attempts = model.Attempts,
-                    Yards = model.Yards,
+                    Targets = model.Targets,
+                    Receptions = model.Receptions,
                     Touchdowns = model.Touchdowns
                 };
 
-            using (var ctx = new ApplicationDbContext())
+            using(var ctx = new ApplicationDbContext())
             {
-                ctx.NFLPlayer_Rushing.Add(entity);
+                ctx.NFLPlayer_Receiving.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
         }
 
-        public IEnumerable<NFLPlayerStats_RushingListItem> GetRushingStats()
+        public IEnumerable<NFLPlayerStats_ReceivingListItem> GetReceivingStats()
         {
-            using (var ctx = new ApplicationDbContext())
+            using(var ctx= new ApplicationDbContext())
             {
                 var query =
                     ctx
-                        .NFLPlayer_Rushing
+                        .NFLPlayer_Receiving
                         .Select(e =>
-                                    new NFLPlayerStats_RushingListItem
+                                    new NFLPlayerStats_ReceivingListItem
                                     {
                                         PlayerId = e.PlayerId,
+                                        Targets=e.Targets,
+                                        Receptions=e.Receptions,
+                                        Touchdowns=e.Touchdowns,
                                     }
                         );
                 return query.ToArray();
             }
         }
 
-        public NFLPlayerStats_RushingDetail GetRushingStatsById(int id)
+        public NFLPlayerStats_ReceivingDetails GetReceivingStatsById(int id)
         {
-            using (var ctx = new ApplicationDbContext())
+            using(var ctx= new ApplicationDbContext())
             {
                 var entity =
                     ctx
-                        .NFLPlayer_Rushing
+                        .NFLPlayer_Receiving
                         .Single(e => e.PlayerId == id);
                 return
-                    new NFLPlayerStats_RushingDetail
+                    new NFLPlayerStats_ReceivingDetails
                     {
                         PlayerId = entity.PlayerId,
-                        Attempts = entity.Attempts,
-                        Yards = entity.Yards,
+                        Targets = entity.Targets,
+                        Receptions = entity.Receptions,
                         Touchdowns = entity.Touchdowns
                     };
             }
         }
 
-        public bool UpdateRushingStats(NFLPlayerStats_RushingEdit model)
+        public bool UpdateReceivingStats(NFLPlayerStats_ReceivingEdit model)
         {
-            using(var ctx = new ApplicationDbContext())
+            using(var ctx=new ApplicationDbContext())
             {
                 var entity =
                     ctx
-                        .NFLPlayer_Rushing
+                        .NFLPlayer_Receiving
                         .Single(e => e.PlayerId == model.PlayerId);
 
-                entity.Attempts = model.Attempts;
-                entity.Yards = model.Yards;
+                entity.Targets = model.Targets;
+                entity.Receptions = model.Receptions;
                 entity.Touchdowns = model.Touchdowns;
 
                 return ctx.SaveChanges() == 1;
             }
         }
 
-        public bool DeleteRushingStats(int id)
+        public bool DeleteReceivingStats(int id)
         {
-            using(var ctx= new ApplicationDbContext())
+            using(var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
-                        .NFLPlayer_Rushing
+                        .NFLPlayer_Receiving
                         .Single(e => e.PlayerId == id);
 
-                ctx.NFLPlayer_Rushing.Remove(entity);
+                ctx.NFLPlayer_Receiving.Remove(entity);
 
                 return ctx.SaveChanges() == 1;
             }

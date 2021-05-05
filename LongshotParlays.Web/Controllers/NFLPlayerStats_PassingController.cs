@@ -9,15 +9,15 @@ using System.Web.Mvc;
 
 namespace LongshotParlays.Web.Controllers
 {
-    public class NFLPlayerStatsRushingController : Controller
+    [Authorize]
+    public class NFLPlayerStats_PassingController : Controller
     {
-        [Authorize]
-        // GET: NFLPlayerStatsRushing
+        // GET: NFLPlayerStatsPassing
         public ActionResult Index()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new NFLPlayerStats_RushingService(userId);
-            var model = service.GetRushingStats();
+            var service = new NFLPlayerStats_PassingService(userId);
+            var model = service.GetPlayerPassingStats();
             return View(model);
         }
 
@@ -28,84 +28,81 @@ namespace LongshotParlays.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(NFLPlayerStats_RushingCreate model)
+        public ActionResult Create(NFLPlayerStats_PassingCreate model)
         {
             if (!ModelState.IsValid)
             {
                 return View(model);
             }
 
-            var service = CreateRushingService();
+            var service = CreatePassingStatsService();
 
-            if (service.CreateRushingStats(model))
+            if (service.CreatePassingStats(model))
             {
-                TempData["SaveResult"] = "Rushing stats added";
+                TempData["SaveResult"] = "Passing Stat was created.";
                 return RedirectToAction("Index");
             };
 
-            ModelState.AddModelError("", "Rushing stats could not be added.");
+            ModelState.AddModelError("", "Passing stat could not be created.");
             return View(model);
         }
 
         public ActionResult Details(int id)
         {
-            var service = CreateRushingService();
-            var model = service.GetRushingStatsById(id);
+            var service = CreatePassingStatsService();
+            var model = service.GetPlayerPassingStatsById(id);
 
             return View(model);
-
         }
 
         public ActionResult Edit(int id)
         {
-            var service = CreateRushingService();
-            var detail = service.GetRushingStatsById(id);
+            var service = CreatePassingStatsService();
+            var detail = service.GetPlayerPassingStatsById(id);
             var model =
-                new NFLPlayerStats_RushingEdit
+                new NFLPlayerStats_PassingEdit
                 {
                     PlayerId = detail.PlayerId,
+                    Player = detail.Player,
+                    Completions = detail.Completions,
                     Attempts = detail.Attempts,
-                    Yards = detail.Yards,
-                    Touchdowns = detail.Touchdowns
+                    Yards = detail.Yards
                 };
-
             return View(model);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, NFLPlayerStats_RushingEdit model)
+        public ActionResult Edit(int id, NFLPlayerStats_PassingEdit model)
         {
             if(!ModelState.IsValid)
             return View(model);
 
             if(model.PlayerId != id)
             {
-                ModelState.AddModelError("", "Id Mismatch");
+                ModelState.AddModelError("", "Player ID mismatch");
                 return View(model);
             }
 
-            var service = CreateRushingService();
+            var service = CreatePassingStatsService();
 
-            if (service.UpdateRushingStats(model))
+            if(service.UpdatePassingStats(model))
             {
-                TempData["SaveResult"] ="Rushing stats were updated.";
+                TempData["SaveResult"] = "Passing Stats updated";
                 return RedirectToAction("Index");
             }
 
-
-            ModelState.AddModelError("", "Rushing stats could not be updated.");
+            ModelState.AddModelError("", "Passing stats could not be updated.");
             return View();
         }
 
         [ActionName("Delete")]
         public ActionResult Delete(int id)
         {
-            var service = CreateRushingService();
-            var model = service.GetRushingStatsById(id);
+            var service = CreatePassingStatsService();
+            var model = service.GetPlayerPassingStatsById(id);
 
             return View(model);
-
         }
 
         [HttpPost]
@@ -113,19 +110,19 @@ namespace LongshotParlays.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeletePost(int id)
         {
-            var service = CreateRushingService();
+            var service = CreatePassingStatsService();
 
-            service.DeleteRushingStats(id);
+            service.DeletePlayerPassingStats(id);
 
-            TempData["SaveResult"] = "Rushing stats were deleted.";
+            TempData["SaveResult"] = "Player passing stats were deleted.";
 
             return RedirectToAction("Index");
         }
 
-        private NFLPlayerStats_RushingService CreateRushingService()
+        private NFLPlayerStats_PassingService CreatePassingStatsService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new NFLPlayerStats_RushingService(userId);
+            var service = new NFLPlayerStats_PassingService(userId);
             return service;
         }
     }

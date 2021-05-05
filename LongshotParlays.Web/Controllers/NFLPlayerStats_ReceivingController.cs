@@ -9,7 +9,7 @@ using System.Web.Mvc;
 
 namespace LongshotParlays.Web.Controllers
 {
-    public class NFLPlayerStatsReceivingController : Controller
+    public class NFLPlayerStats_ReceivingController : Controller
     {
         [Authorize]
         // GET: NFLPlayerStatsReceiving

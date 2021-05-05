@@ -10,6 +10,10 @@ namespace LongshotParlays.Model
     public class NFLPlayerStats_ReceivingListItem
     {
         public int PlayerId { get; set; }
-       
+        public virtual NFLPlayerInfo Player { get; set; }
+        public int Targets { get; set; }
+        public int Receptions { get; set; }
+        public int Touchdowns { get; set; }
+
     }
 }

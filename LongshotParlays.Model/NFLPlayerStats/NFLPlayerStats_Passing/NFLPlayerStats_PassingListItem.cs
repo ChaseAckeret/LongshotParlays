@@ -13,5 +13,9 @@ namespace LongshotParlays.Model
 
         public virtual NFLPlayerInfo Player { get; set; }
 
+        public int Completions { get; set; }
+        public int Attempts { get; set; }
+        public int Yards { get; set; }
+
     }
 }

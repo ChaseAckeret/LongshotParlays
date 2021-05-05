@@ -76,9 +76,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="NFLPlayerInfoService.cs" />
-    <Compile Include="NFLPlayerStats_PassingService.cs" />
-    <Compile Include="NFLPlayerStats_ReceivingService.cs" />
-    <Compile Include="NFLPlayerStats_RushingService.cs" />
+    <Compile Include="NFLPlayerStats_Services\NFLPlayerStats_PassingService.cs" />
+    <Compile Include="NFLPlayerStats_Services\NFLPlayerStats_ReceivingService.cs" />
+    <Compile Include="NFLPlayerStats_Services\NFLPlayerStats_RushingService.cs" />
     <Compile Include="NFLTeamInfoService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

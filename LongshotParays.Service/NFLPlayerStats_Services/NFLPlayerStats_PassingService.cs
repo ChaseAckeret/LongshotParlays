@@ -48,6 +48,9 @@ namespace LongshotParays.Service
                                 {
                                     PlayerId = e.PlayerId,
                                     Player = e.Player,
+                                    Completions=e.Completions,
+                                    Attempts=e.Attempts,
+                                    Yards=e.Yards
                                 }
                      );
 

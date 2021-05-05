@@ -171,9 +171,9 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\NFLPlayerInfoController.cs" />
-    <Compile Include="Controllers\NFLPlayerStatsPassingController.cs" />
-    <Compile Include="Controllers\NFLPlayerStatsReceivingController.cs" />
-    <Compile Include="Controllers\NFLPlayerStatsRushingController.cs" />
+    <Compile Include="Controllers\NFLPlayerStats_PassingController.cs" />
+    <Compile Include="Controllers\NFLPlayerStats_ReceivingController.cs" />
+    <Compile Include="Controllers\NFLPlayerStats_RushingController.cs" />
     <Compile Include="Controllers\NFLTeamInfoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -249,21 +249,21 @@
     <Content Include="Views\NFLTeamInfo\Edit.cshtml" />
     <Content Include="Views\NFLTeamInfo\Delete.cshtml" />
     <Content Include="Views\NFLTeamInfo\Create.cshtml" />
-    <Content Include="Views\NFLPlayerStatsPassing\Index.cshtml" />
-    <Content Include="Views\NFLPlayerStatsPassing\Create.cshtml" />
-    <Content Include="Views\NFLPlayerStatsPassing\Details.cshtml" />
-    <Content Include="Views\NFLPlayerStatsPassing\Edit.cshtml" />
-    <Content Include="Views\NFLPlayerStatsPassing\Delete.cshtml" />
-    <Content Include="Views\NFLPlayerStatsRushing\Index.cshtml" />
-    <Content Include="Views\NFLPlayerStatsReceiving\Index.cshtml" />
-    <Content Include="Views\NFLPlayerStatsRushing\Create.cshtml" />
-    <Content Include="Views\NFLPlayerStatsReceiving\Create.cshtml" />
-    <Content Include="Views\NFLPlayerStatsRushing\Details.cshtml" />
-    <Content Include="Views\NFLPlayerStatsReceiving\Details.cshtml" />
-    <Content Include="Views\NFLPlayerStatsRushing\Edit.cshtml" />
-    <Content Include="Views\NFLPlayerStatsReceiving\Edit.cshtml" />
-    <Content Include="Views\NFLPlayerStatsRushing\Delete.cshtml" />
-    <Content Include="Views\NFLPlayerStatsReceiving\Delete.cshtml" />
+    <Content Include="Views\NFLPlayerStats_Passing\Create.cshtml" />
+    <Content Include="Views\NFLPlayerStats_Passing\Details.cshtml" />
+    <Content Include="Views\NFLPlayerStats_Passing\Edit.cshtml" />
+    <Content Include="Views\NFLPlayerStats_Passing\Delete.cshtml" />
+    <Content Include="Views\NFLPlayerStats_Rushing\Create.cshtml" />
+    <Content Include="Views\NFLPlayerStats_Receiving\Create.cshtml" />
+    <Content Include="Views\NFLPlayerStats_Rushing\Details.cshtml" />
+    <Content Include="Views\NFLPlayerStats_Receiving\Details.cshtml" />
+    <Content Include="Views\NFLPlayerStats_Rushing\Edit.cshtml" />
+    <Content Include="Views\NFLPlayerStats_Receiving\Edit.cshtml" />
+    <Content Include="Views\NFLPlayerStats_Rushing\Delete.cshtml" />
+    <Content Include="Views\NFLPlayerStats_Receiving\Delete.cshtml" />
+    <Content Include="Views\NFLPlayerStats_Passing\Index.cshtml" />
+    <Content Include="Views\NFLPlayerStats_Rushing\Index.cshtml" />
+    <Content Include="Views\NFLPlayerStats_Receiving\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
