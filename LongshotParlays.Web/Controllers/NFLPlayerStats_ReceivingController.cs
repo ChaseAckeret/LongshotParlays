@@ -65,7 +65,8 @@ namespace LongshotParlays.Web.Controllers
                     PlayerId = detail.PlayerId,
                     Targets = detail.Targets,
                     Receptions = detail.Receptions,
-                    Touchdowns = detail.Touchdowns
+                    Touchdowns = detail.Touchdowns,
+                    Yards=detail.Yards
                 };
 
             return View(model);

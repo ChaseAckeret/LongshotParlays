@@ -32,6 +32,9 @@
         <th>
             @Html.DisplayNameFor(model => model.Touchdowns)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Yards)
+        </th>
         <th></th>
     </tr>
 
@@ -49,6 +52,9 @@
     </td>
     <td>
         @Html.DisplayFor(modelItem => item.Touchdowns)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Yards)
     </td>
     <td>
         @Html.ActionLink("Edit", "Edit", new { id = item.PlayerId }) |

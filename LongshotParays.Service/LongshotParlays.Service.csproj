@@ -75,13 +75,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NFLInfo_Services\NFLPlayerInfoService.cs" />
-    <Compile Include="NFLPlayerStats_Services\NFLPlayerStats_PassingService.cs" />
-    <Compile Include="NFLPlayerStats_Services\NFLPlayerStats_ReceivingService.cs" />
-    <Compile Include="NFLPlayerStats_Services\NFLPlayerStats_RushingService.cs" />
-    <Compile Include="NFLInfo_Services\NFLTeamInfoService.cs" />
-    <Compile Include="NFLTeamStats_DefenseService.cs" />
-    <Compile Include="NFLTeamStats_OffenseService.cs" />
+    <Compile Include="NFL\NFLInfo_Services\NFLPlayerInfoService.cs" />
+    <Compile Include="NFL\NFLStats_Services\NFLPlayerStats_Services\NFLPlayerStats_PassingService.cs" />
+    <Compile Include="NFL\NFLStats_Services\NFLPlayerStats_Services\NFLPlayerStats_ReceivingService.cs" />
+    <Compile Include="NFL\NFLStats_Services\NFLPlayerStats_Services\NFLPlayerStats_RushingService.cs" />
+    <Compile Include="NFL\NFLInfo_Services\NFLTeamInfoService.cs" />
+    <Compile Include="NFL\NFLStats_Services\NFLTeamStats_Services\NFLTeamStats_DefenseService.cs" />
+    <Compile Include="NFL\NFLStats_Services\NFLTeamStats_Services\NFLTeamStats_OffenseService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -98,5 +98,6 @@
       <Name>LongshotParlays.Model</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

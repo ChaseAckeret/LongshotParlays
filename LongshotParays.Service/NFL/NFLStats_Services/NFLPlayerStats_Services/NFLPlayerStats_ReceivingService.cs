@@ -25,7 +25,9 @@ namespace LongshotParays.Service
                 {
                     Targets = model.Targets,
                     Receptions = model.Receptions,
-                    Touchdowns = model.Touchdowns
+                    Touchdowns = model.Touchdowns,
+                    PlayerId = model.playerid,
+                    Yards = model.Yards
                 };
 
             using(var ctx = new ApplicationDbContext())
@@ -49,6 +51,7 @@ namespace LongshotParays.Service
                                         Targets=e.Targets,
                                         Receptions=e.Receptions,
                                         Touchdowns=e.Touchdowns,
+                                        Yards=e.Yards,
                                     }
                         );
                 return query.ToArray();
@@ -69,7 +72,8 @@ namespace LongshotParays.Service
                         PlayerId = entity.PlayerId,
                         Targets = entity.Targets,
                         Receptions = entity.Receptions,
-                        Touchdowns = entity.Touchdowns
+                        Touchdowns = entity.Touchdowns,
+                        Yards=entity.Yards,
                     };
             }
         }
@@ -86,6 +90,7 @@ namespace LongshotParays.Service
                 entity.Targets = model.Targets;
                 entity.Receptions = model.Receptions;
                 entity.Touchdowns = model.Touchdowns;
+                entity.Yards = model.Yards;
 
                 return ctx.SaveChanges() == 1;
             }

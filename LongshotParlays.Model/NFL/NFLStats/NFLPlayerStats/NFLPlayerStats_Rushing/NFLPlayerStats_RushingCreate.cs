@@ -9,6 +9,7 @@ namespace LongshotParlays.Model
 {
     public class NFLPlayerStats_RushingCreate
     {
+        public int PlayerId { get; set; }
         public int Attempts { get; set; }
         public int Yards { get; set; }
         public int Touchdowns { get; set; }

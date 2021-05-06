@@ -23,6 +23,7 @@ namespace LongshotParays.Service
             var entity =
                 new NFLPlayerStats_Rushing()
                 {
+                    PlayerId=model.PlayerId,
                     Attempts = model.Attempts,
                     Yards = model.Yards,
                     Touchdowns = model.Touchdowns

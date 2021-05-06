@@ -22,6 +22,7 @@ namespace LongshotParays.Service
             var entity =
                 new NFLPlayerStats_Passing()
                 {
+                    PlayerId=model.PlayerId,
                     Player = model.Player,
                     Completions = model.Completions,
                     Attempts = model.Attempts,

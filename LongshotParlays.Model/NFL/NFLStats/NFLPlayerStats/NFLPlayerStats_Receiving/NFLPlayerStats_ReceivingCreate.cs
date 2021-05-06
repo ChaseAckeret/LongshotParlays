@@ -9,7 +9,7 @@ namespace LongshotParlays.Model
 {
     public class NFLPlayerStats_ReceivingCreate
     {
-        
+        public int playerid { get; set; }
         public int Targets { get; set; }
         public int Receptions { get; set; }
         public int Yards { get; set; }

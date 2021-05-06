@@ -12,5 +12,6 @@ namespace LongshotParlays.Model
         public int Targets { get; set; }
         public int Receptions { get; set; }
         public int Touchdowns { get; set; }
+        public int Yards { get; set; }
     }
 }

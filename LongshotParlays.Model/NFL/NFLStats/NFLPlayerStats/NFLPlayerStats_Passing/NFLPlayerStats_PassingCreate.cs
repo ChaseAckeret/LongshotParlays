@@ -9,6 +9,7 @@ namespace LongshotParlays.Model
 {
     public class NFLPlayerStats_PassingCreate
     {
+        public int PlayerId { get; set; }
         public virtual NFLPlayerInfo Player { get; set; }
         public int Completions { get; set; }
         public int Attempts { get; set; }

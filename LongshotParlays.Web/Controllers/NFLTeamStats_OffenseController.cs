@@ -17,8 +17,8 @@ namespace LongshotParlays.Web.Controllers
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new NFLTeamStats_OffenseService(userId);
-            var model = new NFLTeamStats_OffenseListItem[0];
-            return View();
+            var model = service.GetOffenseStats();
+            return View(model);
         }
 
         public ActionResult Create()
