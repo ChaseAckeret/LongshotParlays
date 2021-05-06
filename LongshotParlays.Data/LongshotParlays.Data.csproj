@@ -88,6 +88,10 @@
     <Compile Include="Migrations\202105050202482_AddedPlayerStats.Designer.cs">
       <DependentUpon>202105050202482_AddedPlayerStats.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105060132321_AddedTeamStatsTables.cs" />
+    <Compile Include="Migrations\202105060132321_AddedTeamStatsTables.Designer.cs">
+      <DependentUpon>202105060132321_AddedTeamStatsTables.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NFL\NFLInfo_Data\NFLPlayerInfo.cs" />
     <Compile Include="NFLStats_Data\NFLPlayerStats_Data\NFLPlayerStats_Passing.cs" />
@@ -111,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105050202482_AddedPlayerStats.resx">
       <DependentUpon>202105050202482_AddedPlayerStats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105060132321_AddedTeamStatsTables.resx">
+      <DependentUpon>202105060132321_AddedTeamStatsTables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
