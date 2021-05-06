@@ -89,13 +89,13 @@
       <DependentUpon>202105050202482_AddedPlayerStats.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="NFLPlayerInfo.cs" />
-    <Compile Include="NFLPlayerStats_Passing.cs" />
-    <Compile Include="NFLPlayerStats_Receiving.cs" />
-    <Compile Include="NFLPlayerStats_Rushing.cs" />
-    <Compile Include="NFLTeamInfo.cs" />
-    <Compile Include="NFLTeamStats_Defense.cs" />
-    <Compile Include="NFLTeamStats_Offense.cs" />
+    <Compile Include="NFL\NFLInfo_Data\NFLPlayerInfo.cs" />
+    <Compile Include="NFLStats_Data\NFLPlayerStats_Data\NFLPlayerStats_Passing.cs" />
+    <Compile Include="NFLStats_Data\NFLPlayerStats_Data\NFLPlayerStats_Receiving.cs" />
+    <Compile Include="NFLStats_Data\NFLPlayerStats_Data\NFLPlayerStats_Rushing.cs" />
+    <Compile Include="NFL\NFLInfo_Data\NFLTeamInfo.cs" />
+    <Compile Include="NFLStats_Data\NFLTeamStats_Data\NFLTeamStats_Defense.cs" />
+    <Compile Include="NFLStats_Data\NFLTeamStats_Data\NFLTeamStats_Offense.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

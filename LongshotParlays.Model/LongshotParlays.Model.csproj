@@ -95,6 +95,14 @@
     <Compile Include="NFLTeamInfo\NFLTeamInfoEdit.cs" />
     <Compile Include="NFLTeamInfo\NFLTeamInfoListItem.cs" />
     <Compile Include="NFLTeamInfo\NFLTeamInfoCreate.cs" />
+    <Compile Include="NFLTeamStats_DefenseCreate.cs" />
+    <Compile Include="NFLTeamStats_DefenseDetail.cs" />
+    <Compile Include="NFLTeamStats_DefenseEdit.cs" />
+    <Compile Include="NFLTeamStats_DefenseListItem.cs" />
+    <Compile Include="NFLTeamStats_OffenseCreate.cs" />
+    <Compile Include="NFLTeamStats_OffenseDetail.cs" />
+    <Compile Include="NFLTeamStats_OffenseEdit.cs" />
+    <Compile Include="NFLTeamStats_OffenseListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -175,6 +175,8 @@
     <Compile Include="Controllers\NFLPlayerStats_ReceivingController.cs" />
     <Compile Include="Controllers\NFLPlayerStats_RushingController.cs" />
     <Compile Include="Controllers\NFLTeamInfoController.cs" />
+    <Compile Include="Controllers\NFLTeamStats_DefenseController.cs" />
+    <Compile Include="Controllers\NFLTeamStats_OffenseController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -264,6 +266,16 @@
     <Content Include="Views\NFLPlayerStats_Passing\Index.cshtml" />
     <Content Include="Views\NFLPlayerStats_Rushing\Index.cshtml" />
     <Content Include="Views\NFLPlayerStats_Receiving\Index.cshtml" />
+    <Content Include="Views\NFLTeamStats_Defense\Index.cshtml" />
+    <Content Include="Views\NFLTeamStats_Offense\Index.cshtml" />
+    <Content Include="Views\NFLTeamStats_Defense\Create.cshtml" />
+    <Content Include="Views\NFLTeamStats_Offense\Create.cshtml" />
+    <Content Include="Views\NFLTeamStats_Defense\Details.cshtml" />
+    <Content Include="Views\NFLTeamStats_Offense\Details.cshtml" />
+    <Content Include="Views\NFLTeamStats_Defense\Edit.cshtml" />
+    <Content Include="Views\NFLTeamStats_Offense\Edit.cshtml" />
+    <Content Include="Views\NFLTeamStats_Defense\Delete.cshtml" />
+    <Content Include="Views\NFLTeamStats_Offense\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
